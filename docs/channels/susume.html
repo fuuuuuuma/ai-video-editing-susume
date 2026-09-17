@@ -6,8 +6,8 @@
   <meta name="description" content="AI動画編集のすゝめのカット、字幕、画角、画像、SE・BGMの編集ルール。">
   <title>AI動画編集のすゝめ｜編集ルール</title>
   <link rel="icon" href="../assets/plugin-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/site.css?v=1.1.0">
-  <script src="../assets/site.js?v=1.1.0" defer></script>
+  <link rel="stylesheet" href="../assets/site.css?v=1.2.2">
+  <script src="../assets/site.js?v=1.2.2" defer></script>
 </head>
 <body data-base=".." data-channel="susume">
   <div class="app-shell">
@@ -22,20 +22,11 @@
           <div>
             <div class="hero-channel">
               <span class="avatar-shell" data-channel-avatar="susume"><span>す</span></span>
-              <div><span class="status-pill">企画型を先に選ぶ</span><p>YouTube / 横長</p></div>
+              <div><span class="status-pill">企画型を先に選ぶ</span><p>YouTube・横長動画</p></div>
             </div>
             <h1>AI動画編集のすゝめ</h1>
             <p class="lead">実演、比較、板書、対談、密着、告知を分け、強調テロップだけでなく、画角・SE・画面収録・QRまで同じ意味の発話へ合わせます。</p>
             <div class="hero-actions"><a class="button" href="#rules">編集ルール</a><a class="button secondary" href="https://www.youtube.com/channel/UC4wbzKndNA4oJ9KaKkSd7yA">公式チャンネル</a></div>
-          </div>
-          <div class="edit-console">
-            <div class="console-head"><span>SUSUME / EDIT DNA</span><span>NO AUTO DIGEST</span></div>
-            <div class="console-lanes">
-              <div class="lane"><span class="lane-label">CUT</span><div class="lane-track"><span style="--lane:#2bb8d8;--width:82%"></span></div></div>
-              <div class="lane"><span class="lane-label">TYPE</span><div class="lane-track"><span style="--lane:#d92d86"></span></div></div>
-              <div class="lane"><span class="lane-label">SCREEN</span><div class="lane-track"><span style="--lane:#f39a2d"></span></div></div>
-              <div class="lane"><span class="lane-label">SOUND</span><div class="lane-track"><span style="--lane:#101827"></span></div></div>
-            </div>
           </div>
         </section>
 
@@ -46,14 +37,14 @@
           <div class="workflow-step"><strong>強調</strong><span>意味で選択</span></div>
           <div class="workflow-step"><strong>画面</strong><span>フレーム＋ワイプ</span></div>
           <div class="workflow-step"><strong>導線</strong><span>QR／CM</span></div>
-          <div class="workflow-step"><strong>QA</strong><span>前後付き比較</span></div>
+          <div class="workflow-step"><strong>確認</strong><span>前後付き比較</span></div>
         </div>
 
         <section class="section" id="rules">
           <div class="section-head"><h2>編集の言語化</h2><p>下記は確認できた型を編集判断へ落としたものです。特定動画の数値を全企画へ固定せず、今回の主参照と素材を優先します。</p></div>
 
           <article class="rule-section" id="format"><h3>構成</h3><div class="rule-body">
-            <p>テーマが近いだけで主参照を選ばず、導入、説明の運び、実演、結果、CTAが近い企画を選びます。</p>
+            <p>テーマが近いだけで主参照を選ばず、導入、説明の運び、実演、結果、案内導線が近い企画を選びます。</p>
             <table class="format-table"><thead><tr><th>型</th><th>見るポイント</th><th>避けること</th></tr></thead><tbody>
               <tr><td>実演</td><td>説明→操作→結果、画面収録、人物ワイプ</td><td>操作前に結果を出す</td></tr>
               <tr><td>比較・板書</td><td>軸、項目、結果を段階更新</td><td>人物カットで図を初期化</td></tr>
@@ -78,7 +69,7 @@
               <li>話者Aの影 <strong>#034857</strong>、話者Bの影 <strong>#646565</strong> は特定参照の値。新素材の発話で対応を確定する。</li>
               <li>通常字幕を文字数ごとに縮小しない。意味改行または発話に沿って分ける。</li>
               <li>本編の字幕を点滅させず、強調終了後も次の字幕まで表示を保つ。</li>
-              <li>デジタル画面収録中は通常字幕を出さない型がある。Pointや操作注釈は別扱い。</li>
+              <li>デジタル画面収録中は通常字幕を出さない型がある。要点表示や操作注釈は別扱い。</li>
             </ul>
           </div></article>
 
@@ -98,7 +89,7 @@
               <li>強調と同じフレームで人物へ寄る。固定倍率ではなく、顔と余白で決める。</li>
               <li>画面収録はオレンジ系背景と専用フレームの例。無加工の全面表示と混同しない。</li>
               <li>人物は円形に切り抜き、リングを別レイヤーにする。1人・2人・3人を企画で選ぶ。</li>
-              <li>Point、比較図、紹介カード、実績画像は対応発話と資料を読む間に保持する。</li>
+              <li>要点表示、比較図、紹介カード、実績画像は対応発話と資料を読む間に保持する。</li>
             </ul>
           </div></article>
 
@@ -113,7 +104,7 @@
           </div></article>
 
           <article class="rule-section" id="qa"><h3>再現確認</h3><div class="rule-body">
-            <p>通常→強調→通常、人物→画面収録→人物、Point、QR、CM、終了画面を、開始・保持・終了の前後付きで比較します。パラメータ表や完成フレーム1枚では合格にしません。</p>
+            <p>通常→強調→通常、人物→画面収録→人物、要点表示、QR、CM、終了画面を、開始・保持・終了の前後付きで比較します。パラメータ表や完成フレーム1枚では合格にしません。</p>
             <p><a href="../status.html">検証状態と「完全に学習済み」の条件を見る</a></p>
           </div></article>
         </section>
