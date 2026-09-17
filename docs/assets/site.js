@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const CHANNELS = [
   {
     id: "susume",
@@ -57,12 +59,12 @@ function buildRail() {
         <img src="${prefixPath("assets/plugin-mark.svg")}" alt="">
       </a>
       <ul class="rail-list">
-        ${CHANNELS.map(channel => `
-          <li><a class="rail-link" href="${prefixPath(channel.href)}" ${current === channel.id ? 'aria-current="page"' : ""}>
-            ${avatar(channel)}<span>${channel.short}</span>
+        ${CHANNELS.map((channel, index) => `
+          <li><a class="rail-link" style="--channel-color:${channel.color}" href="${prefixPath(channel.href)}" aria-label="${channel.name}" ${current === channel.id ? 'aria-current="page"' : ""}>
+            <span class="rail-number">0${index + 1}</span>${avatar(channel)}<span>${channel.short}</span>
           </a></li>`).join("")}
-        <li><a class="rail-link" href="${prefixPath("channels/other.html")}" ${current === "other" ? 'aria-current="page"' : ""}>
-          <span class="avatar-shell" style="--channel-color:#39465c"><span aria-hidden="true">10</span></span><span>その他</span>
+        <li><a class="rail-link" style="--channel-color:#087d75" href="${prefixPath("channels/other.html")}" aria-label="指定外チャンネルの学習" ${current === "other" ? 'aria-current="page"' : ""}>
+          <span class="rail-number">05</span><span class="avatar-shell" style="--channel-color:#087d75"><span aria-hidden="true">10</span></span><span>その他</span>
         </a></li>
       </ul>
     </div>`;
@@ -118,7 +120,45 @@ function bindCopyButtons() {
   });
 }
 
+function bindTimelinePointer() {
+  document.querySelectorAll(".edit-console").forEach(consoleElement => {
+    consoleElement.addEventListener("pointermove", event => {
+      const bounds = consoleElement.getBoundingClientRect();
+      const x = Math.min(100, Math.max(0, ((event.clientX - bounds.left) / bounds.width) * 100));
+      const y = Math.min(100, Math.max(0, ((event.clientY - bounds.top) / bounds.height) * 100));
+      consoleElement.style.setProperty("--pointer-x", `${x}%`);
+      consoleElement.style.setProperty("--pointer-y", `${y}%`);
+    });
+    consoleElement.addEventListener("pointerleave", () => {
+      consoleElement.style.setProperty("--pointer-x", "72%");
+      consoleElement.style.setProperty("--pointer-y", "34%");
+    });
+  });
+}
+
+function bindReveal() {
+  const elements = document.querySelectorAll(".section, .channel-row, .rule-section, .workflow-line");
+  elements.forEach(element => element.classList.add("reveal"));
+
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach(element => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+
+  elements.forEach(element => observer.observe(element));
+}
+
 buildRail();
 buildFooter();
 hydratePageAvatars();
 bindCopyButtons();
+bindTimelinePointer();
+bindReveal();
