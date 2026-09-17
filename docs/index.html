@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Premiereを開かず、4チャンネルの構成・カット・字幕・画角・画像・音を参照から編集するCodexプラグイン。">
+  <title>AI動画編集のすゝめ — Codex Plugin</title>
+  <link rel="icon" href="assets/plugin-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-base=".">
+  <div class="app-shell">
+    <nav data-site-nav aria-label="チャンネル別ガイド"></nav>
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="index.html">AI動画編集のすゝめ</a>
+        <nav class="top-links" aria-label="補助ナビゲーション">
+          <a href="status.html">検証状態</a>
+          <a href="https://github.com/fuuuuuuma/ai-video-editing-susume">GitHub</a>
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <div>
+            <p class="kicker">CODEX PLUGIN / OFFLINE VIDEO EDITING</p>
+            <h1>内容から、編集を決める。</h1>
+            <p class="lead">色やフォントの模倣だけで終わらせず、構成、カットの間、字幕、画角、画像、SE／BGMの時間変化を、チャンネル別の参照へつないで編集します。</p>
+            <div class="hero-actions">
+              <a class="button" href="#install">インストール</a>
+              <a class="button secondary" href="#channels">編集ルールを見る</a>
+            </div>
+          </div>
+          <div class="edit-console" aria-label="編集工程の概念図">
+            <div class="console-head"><span>REFERENCE → OUTPUT</span><span>00:01:17:12</span></div>
+            <div class="console-lanes">
+              <div class="lane"><span class="lane-label">CUT</span><div class="lane-track"><span style="--lane:#0d3a66;--width:86%"></span></div></div>
+              <div class="lane"><span class="lane-label">TYPE</span><div class="lane-track"><span style="--lane:#d92d86"></span></div></div>
+              <div class="lane"><span class="lane-label">FRAME</span><div class="lane-track"><span style="--lane:#2a9d6f"></span></div></div>
+              <div class="lane"><span class="lane-label">SOUND</span><div class="lane-track"><span style="--lane:#e6ad13"></span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="channels">
+          <div class="section-head">
+            <h2>4つの編集文法</h2>
+            <p>発話判定と最終確認は共通です。通常字幕、画面収録、ワイプ、比較図、QR、音は、選んだチャンネルの文法だけを使います。</p>
+          </div>
+          <div class="channel-index">
+            <a class="channel-row" href="channels/susume.html">
+              <span class="avatar-shell" style="--channel-color:#d92d86"><span>す</span><img src="https://yt3.googleusercontent.com/9xet3JUseilkc7tqD-_00hHpt3668vKP5-DAHMB7ej8v-36BSuve2G7wylYsc08uUogQ72qD8eg=s900-c-k-c0x00ffffff-no-rj" alt="" referrerpolicy="no-referrer"></span>
+              <div><h3>AI動画編集のすゝめ</h3><p>実演・比較・対談・密着・告知を分ける</p></div>
+              <p>白字幕＋話者別の色付き影、強調と画角・SEの同期、画面収録の専用フレーム。</p>
+              <span class="row-action">開く</span>
+            </a>
+            <a class="channel-row" href="channels/lab.html">
+              <span class="avatar-shell" style="--channel-color:#7f19c6"><span>収</span><img src="https://yt3.googleusercontent.com/nRq-bPkCfmj6QOKkVq3jfkCC8uquD05NGS5OKJ42OXbzyfOufIsSE-tGHaxWt0NaDfd91jMtIg=s900-c-k-c0x00ffffff-no-rj" alt="" referrerpolicy="no-referrer"></span>
+              <div><h3>AI収益化ラボ</h3><p>単独・対談・検証を分ける</p></div>
+              <p>発話IDから話者色を実描画まで接続。紫・黒・赤・緑を企画と話者の根拠で選ぶ。</p>
+              <span class="row-action">開く</span>
+            </a>
+            <a class="channel-row" href="channels/ccaa.html">
+              <span class="avatar-shell" style="--channel-color:#0d3a66"><span>CC</span><img src="https://yt3.googleusercontent.com/RqA6T7MQYdr0bJTstKVUA-8ODswsmAYAG3jZbWyfTwX83vl-fGuFaZeeKfSbjTFYID2BZLUQ=s900-c-k-c0x00ffffff-no-rj" alt="" referrerpolicy="no-referrer"></span>
+              <div><h3>AA／CC</h3><p>意味カットと必要な間を分ける</p></div>
+              <p>左2段帯、青・緑の話者字幕、Point、章間、画面収録、SE／BGMの寿命を再現。</p>
+              <span class="row-action">開く</span>
+            </a>
+            <a class="channel-row" href="channels/instagram.html">
+              <span class="avatar-shell" style="--channel-color:#e33b32"><span>奥</span><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-19/432001402_751181006972562_3380226484654849194_n.jpg?stp=dst-jpg_s100x100_tt6&amp;_nc_cat=109&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;_nc_ht=scontent-nrt1-1.cdninstagram.com" alt="" referrerpolicy="no-referrer"></span>
+              <div><h3>Instagram奥山</h3><p>初期配置から企画を決める</p></div>
+              <p>Tier、ランキング、四象限、6項目比較、説明、物語を分け、図の状態を保持。</p>
+              <span class="row-action">開く</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>判断の順番</h2>
+            <p>見た目の実装から始めません。内容と初期配置を決めてから、発話を切り、字幕と映像・音を同じ編集表へ結びます。</p>
+          </div>
+          <div class="workflow-line" aria-label="編集工程">
+            <div class="workflow-step"><strong>内容</strong><span>企画型を判定</span></div>
+            <div class="workflow-step"><strong>カット</strong><span>意味と間</span></div>
+            <div class="workflow-step"><strong>字幕</strong><span>話者と連続性</span></div>
+            <div class="workflow-step"><strong>画角</strong><span>人物だけを変換</span></div>
+            <div class="workflow-step"><strong>画像</strong><span>入り・保持・交換</span></div>
+            <div class="workflow-step"><strong>音</strong><span>SEとBGMを分離</span></div>
+            <div class="workflow-step"><strong>QA</strong><span>最終MP4を確認</span></div>
+          </div>
+        </section>
+
+        <section class="section" id="install">
+          <div class="section-head">
+            <h2>2行で導入</h2>
+            <p>GitHubのマーケットプレイスをCodexへ追加し、プラグインをインストールします。反映確認は新しいタスクで行います。</p>
+          </div>
+          <div class="command-box">
+            <button class="copy-button" data-copy="#install-code">コピー</button>
+            <code id="install-code">codex plugin marketplace add fuuuuuuma/ai-video-editing-susume
+codex plugin add ai-video-editing-susume@ai-video-editing</code>
+          </div>
+          <div class="callout"><p>呼び出し例：<strong>$ai-video-editing-susume でAA／CC向けに編集してください</strong></p></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>学習の境界を残す</h2>
+            <p>字幕や静止画を集めただけで「完全に学習済み」とはしません。視覚確認、全編視聴、実聴、再現確認、最終MP4確認を別の状態として記録します。</p>
+          </div>
+          <div class="checklist">
+            <div class="check-item"><strong>構造検査</strong><span>計画の項目と実装IDがつながっているか。</span></div>
+            <div class="check-item"><strong>映像確認</strong><span>入り・保持・戻りと前後の状態を実際に見たか。</span></div>
+            <div class="check-item"><strong>音声確認</strong><span>配置記録だけでなく、声・SE・BGMを実際に聞いたか。</span></div>
+            <div class="check-item"><strong>完成確認</strong><span>書き出したMP4を全編とスマホ相当表示で確認したか。</span></div>
+          </div>
+          <p><a href="status.html">現在の検証状態を確認する</a></p>
+        </section>
+      </main>
+      <footer data-site-footer></footer>
+    </div>
+  </div>
+</body>
+</html>

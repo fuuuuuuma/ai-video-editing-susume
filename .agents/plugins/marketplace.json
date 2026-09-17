@@ -1,0 +1,20 @@
+{
+  "name": "ai-video-editing",
+  "interface": {
+    "displayName": "AI Video Editing"
+  },
+  "plugins": [
+    {
+      "name": "ai-video-editing-susume",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai-video-editing-susume"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

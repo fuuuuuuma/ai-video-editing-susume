@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI動画編集のすゝめのカット、字幕、画角、画像、SE・BGMの編集ルール。">
+  <title>AI動画編集のすゝめ｜編集ルール</title>
+  <link rel="icon" href="../assets/plugin-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body data-base=".." data-channel="susume">
+  <div class="app-shell">
+    <nav data-site-nav aria-label="チャンネル別ガイド"></nav>
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="../index.html">AI動画編集のすゝめ</a>
+        <nav class="top-links"><a href="../status.html">検証状態</a><a href="https://github.com/fuuuuuuma/ai-video-editing-susume">GitHub</a></nav>
+      </header>
+      <main>
+        <section class="hero">
+          <div>
+            <div class="hero-channel">
+              <span class="avatar-shell" data-channel-avatar="susume"><span>す</span></span>
+              <div><span class="status-pill">企画型を先に選ぶ</span><p>YouTube / 横長</p></div>
+            </div>
+            <h1>AI動画編集のすゝめ</h1>
+            <p class="lead">実演、比較、板書、対談、密着、告知を分け、強調テロップだけでなく、画角・SE・画面収録・QRまで同じ意味の発話へ合わせます。</p>
+            <div class="hero-actions"><a class="button" href="#rules">編集ルール</a><a class="button secondary" href="https://www.youtube.com/channel/UC4wbzKndNA4oJ9KaKkSd7yA">公式チャンネル</a></div>
+          </div>
+          <div class="edit-console">
+            <div class="console-head"><span>SUSUME / EDIT DNA</span><span>NO AUTO DIGEST</span></div>
+            <div class="console-lanes">
+              <div class="lane"><span class="lane-label">CUT</span><div class="lane-track"><span style="--lane:#2bb8d8;--width:82%"></span></div></div>
+              <div class="lane"><span class="lane-label">TYPE</span><div class="lane-track"><span style="--lane:#d92d86"></span></div></div>
+              <div class="lane"><span class="lane-label">SCREEN</span><div class="lane-track"><span style="--lane:#f39a2d"></span></div></div>
+              <div class="lane"><span class="lane-label">SOUND</span><div class="lane-track"><span style="--lane:#101827"></span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="workflow-line" aria-label="編集工程">
+          <div class="workflow-step"><strong>企画</strong><span>実演／比較／対談</span></div>
+          <div class="workflow-step"><strong>カット</strong><span>因果と反応</span></div>
+          <div class="workflow-step"><strong>字幕</strong><span>話者別の影</span></div>
+          <div class="workflow-step"><strong>強調</strong><span>意味で選択</span></div>
+          <div class="workflow-step"><strong>画面</strong><span>フレーム＋ワイプ</span></div>
+          <div class="workflow-step"><strong>導線</strong><span>QR／CM</span></div>
+          <div class="workflow-step"><strong>QA</strong><span>前後付き比較</span></div>
+        </div>
+
+        <section class="section" id="rules">
+          <div class="section-head"><h2>編集の言語化</h2><p>下記は確認できた型を編集判断へ落としたものです。特定動画の数値を全企画へ固定せず、今回の主参照と素材を優先します。</p></div>
+
+          <article class="rule-section" id="format"><h3>構成</h3><div class="rule-body">
+            <p>テーマが近いだけで主参照を選ばず、導入、説明の運び、実演、結果、CTAが近い企画を選びます。</p>
+            <table class="format-table"><thead><tr><th>型</th><th>見るポイント</th><th>避けること</th></tr></thead><tbody>
+              <tr><td>実演</td><td>説明→操作→結果、画面収録、人物ワイプ</td><td>操作前に結果を出す</td></tr>
+              <tr><td>比較・板書</td><td>軸、項目、結果を段階更新</td><td>人物カットで図を初期化</td></tr>
+              <tr><td>対談・密着</td><td>話者交代、反応、紹介カード</td><td>単独実演の字幕色を流用</td></tr>
+              <tr><td>告知</td><td>特典、QR、CM、終了画面</td><td>古いキャンペーンをコピー</td></tr>
+            </tbody></table>
+          </div></article>
+
+          <article class="rule-section" id="cut"><h3>カット感</h3><div class="rule-body">
+            <ul>
+              <li>言い直し、撮影相談、操作待ちを削り、結論までの距離を短くする。</li>
+              <li>対談の反応、比較の溜め、実演結果を読む間は残す。</li>
+              <li>「操作すると言う → クリック → 結果」の順序を守る。</li>
+              <li>語頭・語尾を聞き、字幕だけ消して音声に言い直しを残さない。</li>
+            </ul>
+            <div class="callout"><p>一律の無音秒数ではなく、説明、実演、対談、告知ごとに残す間を判断します。</p></div>
+          </div></article>
+
+          <article class="rule-section" id="captions"><h3>字幕</h3><div class="rule-body">
+            <p>保存済みNo.27系の観測例は、Source Han Sans Heavy、サイズ90、白文字。話者色は太い縁ではなく、色付きシャドウとして見える例があります。</p>
+            <ul>
+              <li>話者Aの影 <strong>#034857</strong>、話者Bの影 <strong>#646565</strong> は特定参照の値。新素材の発話で対応を確定する。</li>
+              <li>通常字幕を文字数ごとに縮小しない。意味改行または発話に沿って分ける。</li>
+              <li>本編の字幕を点滅させず、強調終了後も次の字幕まで表示を保つ。</li>
+              <li>デジタル画面収録中は通常字幕を出さない型がある。Pointや操作注釈は別扱い。</li>
+            </ul>
+          </div></article>
+
+          <article class="rule-section" id="emphasis"><h3>強調</h3><div class="rule-body">
+            <table class="format-table"><thead><tr><th>意味</th><th>見た目</th><th>組み合わせ</th></tr></thead><tbody>
+              <tr><td>強い断言</td><td>大きい白明朝＋黒縁・影</td><td>寄り画＋短いベル</td></tr>
+              <tr><td>メリット・特典</td><td>金明朝＋多重縁</td><td>白→金の変化＋スウィッシュ</td></tr>
+              <tr><td>ツッコミ</td><td>力強い手書き＋位置揺れ</td><td>打撃系SE</td></tr>
+              <tr><td>弱気・ネガティブ</td><td>弱い文字＋波打ち</td><td>間の抜けたSE</td></tr>
+              <tr><td>決意・締め</td><td>筆文字＋飛び込み・バウンド</td><td>打音</td></tr>
+            </tbody></table>
+            <p>回数合わせで入れず、発話の意味と参照の使う条件が一致した場合だけ採用します。</p>
+          </div></article>
+
+          <article class="rule-section" id="screen"><h3>画角・画面</h3><div class="rule-body">
+            <ul>
+              <li>強調と同じフレームで人物へ寄る。固定倍率ではなく、顔と余白で決める。</li>
+              <li>画面収録はオレンジ系背景と専用フレームの例。無加工の全面表示と混同しない。</li>
+              <li>人物は円形に切り抜き、リングを別レイヤーにする。1人・2人・3人を企画で選ぶ。</li>
+              <li>Point、比較図、紹介カード、実績画像は対応発話と資料を読む間に保持する。</li>
+            </ul>
+          </div></article>
+
+          <article class="rule-section" id="sound"><h3>音・導線</h3><div class="rule-body">
+            <ul>
+              <li>デモ音、試聴音、生成音声の区間はBGMを抑え、元音を聞かせる。</li>
+              <li>強調SEの開始と画角・文字の入りを同じイベントへ結ぶ。SEの尾は字幕尺で切らない。</li>
+              <li>ダイジェストを自動追加しない。</li>
+              <li>小さい常設QRと大きい案内QRを分ける。案件のQRと案内文を確認する。</li>
+              <li>CM・特典案内・エンドカードは今回の素材と発話へ合わせる。</li>
+            </ul>
+          </div></article>
+
+          <article class="rule-section" id="qa"><h3>再現確認</h3><div class="rule-body">
+            <p>通常→強調→通常、人物→画面収録→人物、Point、QR、CM、終了画面を、開始・保持・終了の前後付きで比較します。パラメータ表や完成フレーム1枚では合格にしません。</p>
+            <p><a href="../status.html">検証状態と「完全に学習済み」の条件を見る</a></p>
+          </div></article>
+        </section>
+      </main>
+      <footer data-site-footer></footer>
+    </div>
+  </div>
+</body>
+</html>

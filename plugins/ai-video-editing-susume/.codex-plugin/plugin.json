@@ -1,0 +1,44 @@
+{
+  "name": "ai-video-editing-susume",
+  "version": "1.0.0",
+  "description": "Premiereを開かず、4系統のチャンネル編集を参照分析から最終QAまで進めるCodexプラグイン",
+  "author": {
+    "name": "河村風真",
+    "url": "https://github.com/fuuuuuuma"
+  },
+  "homepage": "https://fuuuuuuma.github.io/ai-video-editing-susume/",
+  "repository": "https://github.com/fuuuuuuma/ai-video-editing-susume",
+  "license": "MIT",
+  "keywords": [
+    "video-editing",
+    "youtube",
+    "instagram-reels",
+    "captions",
+    "ffmpeg",
+    "japanese"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI動画編集のすゝめ",
+    "shortDescription": "4チャンネルの編集判断とQAをPremiereなしで実行",
+    "longDescription": "AI動画編集のすゝめ、AI収益化ラボ、AA／CC、Instagram奥山の構成・カット・字幕・画角・画像・音を、参照根拠と検証記録から編集します。その他のYouTubeは10本以上を時系列で分析してから着手します。",
+    "developerName": "河村風真",
+    "category": "Productivity",
+    "capabilities": [
+      "Local files",
+      "Video planning",
+      "Quality assurance"
+    ],
+    "websiteURL": "https://fuuuuuuma.github.io/ai-video-editing-susume/",
+    "privacyPolicyURL": "https://fuuuuuuma.github.io/ai-video-editing-susume/privacy.html",
+    "termsOfServiceURL": "https://fuuuuuuma.github.io/ai-video-editing-susume/terms.html",
+    "defaultPrompt": [
+      "この素材をAI動画編集のすゝめ向けに編集してください",
+      "AA／CC向けの編集計画と検証表を作ってください",
+      "別のYouTubeチャンネルを10本分析して編集してください"
+    ],
+    "brandColor": "#0D3A66",
+    "composerIcon": "./assets/plugin-mark.svg",
+    "logo": "./assets/plugin-mark.svg"
+  }
+}

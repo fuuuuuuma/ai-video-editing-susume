@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI収益化ラボの話者別字幕、カット、画面収録、SE・BGMの編集ルール。">
+  <title>AI収益化ラボ｜編集ルール</title>
+  <link rel="icon" href="../assets/plugin-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body data-base=".." data-channel="lab">
+  <div class="app-shell">
+    <nav data-site-nav aria-label="チャンネル別ガイド"></nav>
+    <div class="page">
+      <header class="topbar"><a class="wordmark" href="../index.html">AI動画編集のすゝめ</a><nav class="top-links"><a href="../status.html">検証状態</a><a href="https://github.com/fuuuuuuma/ai-video-editing-susume">GitHub</a></nav></header>
+      <main>
+        <section class="hero">
+          <div>
+            <div class="hero-channel"><span class="avatar-shell" data-channel-avatar="lab"><span>収</span></span><div><span class="status-pill">話者を実描画まで分ける</span><p>YouTube / 横長</p></div></div>
+            <h1>AI収益化ラボ</h1>
+            <p class="lead">単独実演、対談、検証・現場を分け、字幕の色を話者へ直接結びます。紫色を全員へ適用するだけでは再現になりません。</p>
+            <div class="hero-actions"><a class="button" href="#rules">編集ルール</a><a class="button secondary" href="https://www.youtube.com/channel/UCvwle25gm0dAecqQJjdBOng">公式チャンネル</a></div>
+          </div>
+          <div class="edit-console"><div class="console-head"><span>LAB / SPEAKER MAP</span><span>UTTERANCE → PIXEL</span></div><div class="console-lanes">
+            <div class="lane"><span class="lane-label">VOICE A</span><div class="lane-track"><span style="--lane:#7f19c6;--width:84%"></span></div></div>
+            <div class="lane"><span class="lane-label">VOICE B</span><div class="lane-track"><span style="--lane:#101827"></span></div></div>
+            <div class="lane"><span class="lane-label">SCREEN</span><div class="lane-track"><span style="--lane:#2a9d6f"></span></div></div>
+            <div class="lane"><span class="lane-label">SOUND</span><div class="lane-track"><span style="--lane:#d8a122"></span></div></div>
+          </div></div>
+        </section>
+
+        <div class="workflow-line"><div class="workflow-step"><strong>企画</strong><span>単独／対談／現場</span></div><div class="workflow-step"><strong>発話</strong><span>IDを付与</span></div><div class="workflow-step"><strong>話者</strong><span>根拠で確定</span></div><div class="workflow-step"><strong>字幕</strong><span>書式へ接続</span></div><div class="workflow-step"><strong>画面</strong><span>ワイプ＋資料</span></div><div class="workflow-step"><strong>音</strong><span>意味で選択</span></div><div class="workflow-step"><strong>QA</strong><span>実画素を確認</span></div></div>
+
+        <section class="section" id="rules">
+          <div class="section-head"><h2>編集の言語化</h2><p>初期参照期間は2026-05-04より前。色や出演者が同じ別チャンネルの編集を混ぜません。</p></div>
+
+          <article class="rule-section"><h3>構成</h3><div class="rule-body">
+            <table class="format-table"><thead><tr><th>型</th><th>軸</th><th>代表的な要素</th></tr></thead><tbody>
+              <tr><td>単独実演</td><td>説明→操作→結果</td><td>紫系字幕、青いテーマ帯、右下ワイプ</td></tr>
+              <tr><td>対談・人物</td><td>話者交代と物語</td><td>話者色、紹介カード、引きと寄り</td></tr>
+              <tr><td>検証・現場</td><td>日数→行動→結果</td><td>日数ラベル、モニター、結果、反応文字</td></tr>
+            </tbody></table>
+          </div></article>
+
+          <article class="rule-section"><h3>カット感</h3><div class="rule-body">
+            <ul><li>言い直し、迷い、撮影指示、不要な生成待ちを削る。</li><li>対談の回答待ち、驚き、結果の読解、検証の経過を理解する間は残す。</li><li>単独実演ではクリックと結果を逆転させない。</li><li>短い相槌を字幕ごと主話者へ統合せず、必要性を発話単位で判断する。</li></ul>
+          </div></article>
+
+          <article class="rule-section"><h3>話者別字幕</h3><div class="rule-body">
+            <p><strong>発話ID → 話者ID → 書式ID → 描画レイヤーID</strong>を一本につなぎます。</p>
+            <ul>
+              <li>根拠は今回の音声、口の動き、分離マイク、明示指定。</li>
+              <li>疑問文、相槌、話題、顔の映りだけで本人を決めない。</li>
+              <li>未割当を主話者へ寄せず、同時発話は別レイヤーにする。</li>
+              <li>複数話者を同じ通常書式へ潰した場合は書き出しを止める。</li>
+            </ul>
+            <div class="callout warning"><p>同じ「お願いします」の無効クリップと有効クリップの重複を、2人の発話と数えないよう、有効状態も確認します。</p></div>
+          </div></article>
+
+          <article class="rule-section"><h3>字幕デザイン</h3><div class="rule-body">
+            <p>特定対談の観測例はHiragino Sans W7、サイズ90、palt、黒 <strong>#000000</strong> と紫 <strong>#A61AFC</strong>、白い縁6。別ゲスト回には赤・緑もあります。</p>
+            <ul><li>人物名だけで色を固定しない。</li><li>固定サイズを保ち、文ごとの縮小・横倍率変更を避ける。</li><li>大きい紫明朝は主張、青い手書き＋黒帯は注意、赤明朝は感情など、意味で選ぶ。</li><li>画面収録にも通常字幕を出す実例がある。</li></ul>
+          </div></article>
+
+          <article class="rule-section"><h3>導入・画面</h3><div class="rule-body">
+            <ul>
+              <li>緑系OP、黒面＋金縁のToday's Topic、左上の青いテーマ帯を別レイヤーで管理。</li>
+              <li>人物ワイプは右下・緑系リングの実例。クリック対象と字幕を避ける。</li>
+              <li>単独ワイプを複数人回へ機械的に使わない。</li>
+              <li>小さい右上QR、大きい中央QR、中間CM、末尾CM、特典カードを別イベントにする。</li>
+            </ul>
+          </div></article>
+
+          <article class="rule-section"><h3>SE／BGM</h3><div class="rule-body">
+            <p>拍子木、和太鼓、チリン、金額表示、間の抜けた反応音などの配置例があります。</p>
+            <ul><li>主張、テーマ、金額、反応へ意味で割り当てる。</li><li>素材名が存在するだけで使用・試聴済みにしない。</li><li>SEの尾を字幕の終了で切らない。</li><li>デモ・試聴の実音をBGMで隠さない。</li></ul>
+          </div></article>
+
+          <article class="rule-section"><h3>再現確認</h3><div class="rule-body">
+            <p>全発話の話者割当、色の実画素、通常→強調→通常、画面収録の字幕、ワイプ、QR、CM、音を分けて検査します。機械検査は本人確認と実聴を代行しません。</p>
+          </div></article>
+        </section>
+      </main>
+      <footer data-site-footer></footer>
+    </div>
+  </div>
+</body>
+</html>

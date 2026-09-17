@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "channel": "ai-video-editing-susume",
+  "primary_reference": "video-id and reviewed time ranges",
+  "format": "explainer",
+  "areas": {
+    "initial_layout": {"status": "use", "reason": "Matches the opening structure", "reference": "reference opening", "events": []},
+    "cuts": {"status": "use", "reason": "Semantic cut decisions", "reference": "reference pacing", "events": []},
+    "captions": {"status": "use", "reason": "Continuous speech captions", "reference": "reference captions", "events": []},
+    "framing": {"status": "use", "reason": "Framing follows emphasis", "reference": "reference framing", "events": []},
+    "images": {"status": "use", "reason": "Images explain specific cues", "reference": "reference images", "events": []},
+    "se": {"status": "use", "reason": "Sound marks confirmed events", "reference": "reference sound", "events": []},
+    "bgm": {"status": "use", "reason": "Music follows content sections", "reference": "reference music", "events": []},
+    "cta": {"status": "use", "reason": "CTA uses current campaign assets", "reference": "reference CTA", "events": []},
+    "qa": {"status": "use", "reason": "Final MP4 review", "reference": "verification contract", "events": []}
+  },
+  "semantic_review": []
+}
